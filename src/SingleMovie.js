@@ -3,17 +3,16 @@ import useFetch from "./useFetch";
 
 const SingleMovie = () => {
   const { id } = useParams();
-  console.log(id);
 
-  const { isLoading, movie, isError } = useFetch(`&i=${id}`);
+  const { isLoading, movie} = useFetch(`&i=${id}`);
 
-  // if (isLoading) {
-  //   return (
-  //     <section className="movie-section ">
-  //       <div className="loading">Loading....</div>;
-  //     </section>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <section className="movie-section ">
+        <div className="loading">Loading....</div>;
+      </section>
+    );
+  }
 
   return (
     <section className="movie-section">

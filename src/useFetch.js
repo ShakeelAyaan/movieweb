@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 
 // setting the api link
-export const API_URL = `https://www.omdbapi.com/?&apikey=${process.env.REACT_APP_MOVIE_KEY}&s=hacker`;
+export const API_URL = `https://www.omdbapi.com/?&apikey=${process.env.REACT_APP_MOVIE_KEY}`;
+
 
 const useFetch = (apiParams) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,14 +14,13 @@ const useFetch = (apiParams) => {
     try {
       const res = await fetch(url);
       const data = await res.json();
-
       console.log(data);
       if (data.Response === "True") {
         setIsLoading(false);
         setMovie(data.Search || data);
         setIsError({ show: "false", msg: "" });
       } else {
-        setIsError({ show: "true", msg: data.Error });
+        setIsError({ show: 'true', msg: data.Error });
       }
     } catch (error) {
       console.log(error);
