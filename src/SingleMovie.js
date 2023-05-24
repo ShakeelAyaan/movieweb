@@ -5,15 +5,15 @@ const SingleMovie = () => {
   const { id } = useParams();
   console.log(id);
 
-  const { isLoading, movie } = useFetch(`&i=${id}`);
+  const {  movie } = useFetch(`&i=${id}`);
 
-  if (isLoading) {
-    return (
-      <section className="movie-section ">
-        <div className="loading">Loading....</div>;
-      </section>
-    );
-  }
+//   if (isLoading) {
+//     return (
+//       <section className="movie-section ">
+//         <div className="loading">Loading....</div>;
+//       </section>
+//     );
+//   } iserror
 
   return (
     <section className="movie-section">
