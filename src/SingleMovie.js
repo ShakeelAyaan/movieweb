@@ -4,7 +4,6 @@ import useFetch from "./useFetch";
 const SingleMovie = () => {
   const { id } = useParams();
 
-<<<<<<< HEAD
   const { isLoading, movie} = useFetch(`&i=${id}`);
 
   if (isLoading) {
@@ -14,18 +13,8 @@ const SingleMovie = () => {
       </section>
     );
   }
-=======
-  const {  movie } = useFetch(`&i=${id}`);
 
-//   if (isLoading) {
-//     return (
-//       <section className="movie-section ">
-//         <div className="loading">Loading....</div>;
-//       </section>
-//     );
-//   } iserror
->>>>>>> aa9cb956417978499935a511c8f2f42f4ec0c0cf
-
+ 
   return (
     <section className="movie-section">
       <div className="movie-card">
