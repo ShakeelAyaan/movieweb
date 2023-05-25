@@ -1,8 +1,7 @@
 import  { useState, useEffect } from "react";
 
-// setting the api link
+// setting the api link skgit
 export const API_URL = `https://www.omdbapi.com/?&apikey=${process.env.REACT_APP_MOVIE_KEY}`;
-
 
 const useFetch = (apiParams) => {
   const [isLoading, setIsLoading] = useState(true);
